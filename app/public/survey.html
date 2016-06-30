@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Reservation Page</title>
+	<title>Survey Page</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -41,19 +41,123 @@
 				
 							<div class="form-group">
 								<label for="">Name (Required)</label>
-								<input type="text" class="form-control" id="name">
+								<input type="text" class="form-control" id="friend_name" required>
 							</div>
 
 							<div class="form-group">
 								<label for="">Link to Photo Image (Required)</label>
-								<input type="text" class="form-control" id="picture">
+								<input type="text" class="form-control" id="friend_photo" required>
 							</div>
-
 							<div class="form-group">
-								<label for="">Email</label>
-								<input type="text" class="form-control" id="email">
+								<label for="">Question 1: Your mind is always buzzing with unexplored ideas and plans.</label><br>
+								<select class="c-select" id='q01' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
 							</div>
-
+							<div class="form-group">
+								<label for="">Question 2: Generally speaking, you rely more on your experience than your imagination. ideas and plans.</label><br>
+								<select class="c-select" id='q02' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 3: You find it easy to stay relaxed and focused even when there is some pressure.</label><br>
+								<select class="c-select" id='q03' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 4: You rarely do something just out of sheer curiosity.</label><br>
+								<select class="c-select" id='q04' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 5: People can rarely upset you.</label><br>
+								<select class="c-select" id='q05' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 6: It is often difficult for you to relate to other people’s feelings.</label><br>
+								<select class="c-select" id='q06' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 7: In a discussion, truth should be more important than people’s sensitivities.</label><br>
+								<select class="c-select" id='q07' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 8: You rarely get carried away by fantasies and ideas.</label><br>
+								<select class="c-select" id='q08' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 9: You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label><br>
+								<select class="c-select" id='q09' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="">Question 10: You feel more energetic after spending time with a group of people.</label><br>
+								<select class="c-select" id='q10' required=true>
+									  <option selected>Select an option</option>
+									  <option value="1">1 (Strongly Disagree)</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5 (Strongly Agree)</option>
+								</select>
+							</div>
 							<button type="submit" class="btn btn-primary submit">Submit</button>
 						</form>
 
@@ -78,6 +182,9 @@
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
 
+
+
+
 	// In this code below we create the Front-end Javascript which "POSTS" our form data to our express server.
 	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
 	// Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
@@ -86,14 +193,14 @@
 	$(".submit").on("click", function(){
 		
 		// Here we grab the form elements
-		var newReservation = {
-			customerName: $('#reserve_name').val().trim(),
-			phoneNumber: $('#reserve_phone').val().trim(),
-			customerEmail: $('#reserve_email').val().trim(),
-			customerID: $('#reserve_uniqueID').val().trim()
+		var newFriend = {
+			name: $('#friend_name').val().trim(),
+			photo: $('#friend_photo').val().trim(),
+			scores: [parseInt($('#q01').val().trim()), parseInt($('#q02').val().trim()), parseInt($('#q03').val().trim()), parseInt($('#q04').val().trim()), parseInt($('#q05').val().trim()), parseInt($('#q06').val().trim()), parseInt($('#q07').val().trim()), parseInt($('#q08').val().trim()), parseInt($('#q09').val().trim()), parseInt($('#q10').val().trim())]
+			
 		};
 
-		console.log(newReservation);
+		console.log(newFriend);
 
 		// This line is the magic. It's very similar to the standard ajax function we used. 
 		// Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
@@ -104,26 +211,26 @@
 		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
 		var currentURL = window.location.origin;
 
-	    $.post(currentURL + "/api/tables", newReservation,
-	    function(data){
+	    $.post(currentURL + "/api/survey", newFriend, function(data) {
+	    	
+	    	alert("Yay! You are officially booked!");
 
-	    	// If a table is available... tell user they are booked.
-	    	if(data == true){
-	    		alert("Yay! You are officially booked!")
-	    	}
-
-	    	// If a table is available... tell user they on the waiting list.
-	    	if(data == false){
-	    		alert("Sorry you are on the wait list")
-	    	}
-
-	    	// Clear the form when submitting
-    		$('#reserve_name').val("");
-			$('#reserve_phone').val("");
-			$('#reserve_email').val("");
-			$('#reserve_uniqueID').val("");
-
-	    });
+	    	$('#friend_name').val("");
+			$('#friend_picture').val("");
+			$('#q01').val("");
+			$('#q02').val("");
+			$('#q03').val("");
+			$('#q04').val("");
+			$('#q05').val("");
+			$('#q06').val("");
+			$('#q07').val("");
+			$('#q08').val("");
+			$('#q09').val("");
+			$('#q10').val("");
+			//for  in data
+			console.log(data[1]);
+	    }).validate;
+	    
 
 return false;
 

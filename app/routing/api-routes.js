@@ -22,10 +22,14 @@ module.exports = function(app){
 	// (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table) 
 	// ---------------------------------------------------------------------------
 
-	app.get('/api/survey', function(req, res){
+	app.get('/api/friends', function(req, res){
 		res.json(friendsData);
 	});
 
+	app.post('/api/survey', function(req, res){
+		friendsData.push(req.body);
+		res.json(friendsData);
+	});
 	
 
 	// API POST Requests
@@ -36,17 +40,7 @@ module.exports = function(app){
 	// Then the server saves the data to the tableData array)
 	// ---------------------------------------------------------------------------
 
-	/* app.post('/api/survey', function(req, res){
-
-		
-		// It will do this by sending out the value "true" have a table 
-		if(friendsData.length < 5 ){
-			friendsData.push(req.body);
-			res.json(true); // KEY LINE
-		}
-
-	});
-*/
+	
 	
 	
 } // end module.exports
