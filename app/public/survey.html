@@ -37,20 +37,20 @@
 					</div>
 					<div class="panel-body">
 					<h4>About You</h4>
-						<form role="form">
+						<form role="form" id="survey-form">
 				
 							<div class="form-group">
 								<label for="">Name (Required)</label>
-								<input type="text" class="form-control" id="friend_name" required>
+								<input type="text" class="form-control" id="friend_name" required="required">
 							</div>
 
 							<div class="form-group">
 								<label for="">Link to Photo Image (Required)</label>
-								<input type="text" class="form-control" id="friend_photo" required>
+								<input type="text" class="form-control" id="friend_photo" required="required">
 							</div>
 							<div class="form-group">
 								<label for="">Question 1: Your mind is always buzzing with unexplored ideas and plans.</label><br>
-								<select class="c-select" id='q01' required=true>
+								<select class="c-select" id='q01' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -61,7 +61,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 2: Generally speaking, you rely more on your experience than your imagination. ideas and plans.</label><br>
-								<select class="c-select" id='q02' required=true>
+								<select class="c-select" id='q02' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -72,7 +72,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 3: You find it easy to stay relaxed and focused even when there is some pressure.</label><br>
-								<select class="c-select" id='q03' required=true>
+								<select class="c-select" id='q03' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -83,7 +83,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 4: You rarely do something just out of sheer curiosity.</label><br>
-								<select class="c-select" id='q04' required=true>
+								<select class="c-select" id='q04' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -94,7 +94,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 5: People can rarely upset you.</label><br>
-								<select class="c-select" id='q05' required=true>
+								<select class="c-select" id='q05' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -105,7 +105,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 6: It is often difficult for you to relate to other people’s feelings.</label><br>
-								<select class="c-select" id='q06' required=true>
+								<select class="c-select" id='q06' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -116,7 +116,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 7: In a discussion, truth should be more important than people’s sensitivities.</label><br>
-								<select class="c-select" id='q07' required=true>
+								<select class="c-select" id='q07' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -127,7 +127,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 8: You rarely get carried away by fantasies and ideas.</label><br>
-								<select class="c-select" id='q08' required=true>
+								<select class="c-select" id='q08' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -138,7 +138,7 @@
 							</div>
 							<div class="form-group">
 								<label for="">Question 9: You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label><br>
-								<select class="c-select" id='q09' required=true>
+								<select class="c-select" id='q09' required="required">
 									  <option selected>Select an option</option>
 									  <option value="1">1 (Strongly Disagree)</option>
 									  <option value="2">2</option>
@@ -189,18 +189,18 @@
 	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
 	// Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
 	// In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file 
-
+	
 	$(".submit").on("click", function(){
-		
-		// Here we grab the form elements
-		var newFriend = {
-			name: $('#friend_name').val().trim(),
-			photo: $('#friend_photo').val().trim(),
-			scores: [parseInt($('#q01').val().trim()), parseInt($('#q02').val().trim()), parseInt($('#q03').val().trim()), parseInt($('#q04').val().trim()), parseInt($('#q05').val().trim()), parseInt($('#q06').val().trim()), parseInt($('#q07').val().trim()), parseInt($('#q08').val().trim()), parseInt($('#q09').val().trim()), parseInt($('#q10').val().trim())]
-			
-		};
+		if ($('#friend_name').val() != "" && $('#friend_photo').val() != "" && $('#q01').val() != "" && $('#q02').val() != "" && $('#q03').val() != "" && $('#q04').val() != "" && $('#q05').val() != "" && $('#q06').val() != "" && $('#q07').val() != "" && $('#q08').val() != "" && $('#q09').val() != "" && $('#q10').val() != ""){
 
-		console.log(newFriend);
+				var newFriend = {
+					name: $('#friend_name').val().trim(),
+					photo: $('#friend_photo').val().trim(),
+					scores: [parseInt($('#q01').val().trim()), parseInt($('#q02').val().trim()), parseInt($('#q03').val().trim()), parseInt($('#q04').val().trim()), parseInt($('#q05').val().trim()), parseInt($('#q06').val().trim()), parseInt($('#q07').val().trim()), parseInt($('#q08').val().trim()), parseInt($('#q09').val().trim()), parseInt($('#q10').val().trim())]
+					
+				};
+
+				console.log('success: '+newFriend);
 
 		// This line is the magic. It's very similar to the standard ajax function we used. 
 		// Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
@@ -209,31 +209,42 @@
 
 		// Here we get the location of the root page. 
 		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-		var currentURL = window.location.origin;
+				var currentURL = window.location.origin;
 
-	    $.post(currentURL + "/api/survey", newFriend, function(data) {
+	    		$.post(currentURL + "/api/survey", newFriend, function(data) {
 	    	
-	    	alert("Yay! You are officially booked!");
+		    		alert("Yay! You are officially booked!");
 
-	    	$('#friend_name').val("");
-			$('#friend_picture').val("");
-			$('#q01').val("");
-			$('#q02').val("");
-			$('#q03').val("");
-			$('#q04').val("");
-			$('#q05').val("");
-			$('#q06').val("");
-			$('#q07').val("");
-			$('#q08').val("");
-			$('#q09').val("");
-			$('#q10').val("");
-			//for  in data
-			console.log(data[1]);
-	    }).validate;
-	    
+			    	$('#friend_name').val("");
+					$('#friend_picture').val("");
+					$('#q01').val("");
+					$('#q02').val("");
+					$('#q03').val("");
+					$('#q04').val("");
+					$('#q05').val("");
+					$('#q06').val("");
+					$('#q07').val("");
+					$('#q08').val("");
+					$('#q09').val("");
+					$('#q10').val("");
+					//findFriend();
 
-return false;
+	    		});
+				return false;
+		}
 
+		else {
+			alert('Name and Photo must be entered to continue!');
+			console.log('failed: '+newFriend);
+
+		}
 });
+
+/*function findFriend() {
+	for (i = 0;i<data.length) {
+
+	}
+
+}*/
 
 </script>
