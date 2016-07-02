@@ -191,7 +191,6 @@
 	// In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file 
 	
 	$(".submit").on("click", function(){
-		if ($('#friend_name').val() != "" && $('#friend_photo').val() != "" && $('#q01').val() != "" && $('#q02').val() != "" && $('#q03').val() != "" && $('#q04').val() != "" && $('#q05').val() != "" && $('#q06').val() != "" && $('#q07').val() != "" && $('#q08').val() != "" && $('#q09').val() != "" && $('#q10').val() != ""){
 
 				var newFriend = {
 					name: $('#friend_name').val().trim(),
@@ -200,7 +199,7 @@
 					
 				};
 
-				console.log('success: '+newFriend);
+				console.log(newFriend);
 
 		// This line is the magic. It's very similar to the standard ajax function we used. 
 		// Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
@@ -231,13 +230,8 @@
 
 	    		});
 				return false;
-		}
 
-		else {
-			alert('Name and Photo must be entered to continue!');
-			console.log('failed: '+newFriend);
-
-		}
+		
 });
 
 /*function findFriend() {
