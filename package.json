@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "find friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRiepe/friendfinder.git"
+  },
+  "keywords": [
+    "friendfinder"
+  ],
+  "author": "John Riepe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRiepe/friendfinder/issues"
+  },
+  "homepage": "https://github.com/JRiepe/friendfinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}
